@@ -4,6 +4,8 @@ const app = express();
 
 const PORT = 3000;
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
   res.send("Hello, web!");
 });
@@ -13,5 +15,5 @@ app.listen(PORT, () => {
 });
 
 app.get("/about", (req, res) => {
-  res.send("This is a web programming course.");
+  res.render("about", { title: "About" });
 });
