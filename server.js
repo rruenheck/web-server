@@ -16,4 +16,4 @@ app.listen(PORT, () => {
 
 app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
-});
+});// step one
